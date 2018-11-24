@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#000000">
 
     <!-- Barcode Reader fragment -->
     <fragment
         android:id="@+id/barcode_fragment"
         android:name="info.androidhive.barcode.BarcodeReader"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="430dp"
+        android:layout_height="600dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="50dp"
         app:auto_focus="true"
         app:use_flash="false" />
 
@@ -20,10 +22,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#44000000"
-        app:line_color="#7323DC"
+        android:layout_marginRight="10dp"
+        app:line_color="#FA130C"
         app:line_speed="6"
         app:line_width="4"
-        app:square_height="200"
-        app:square_width="200" />
+        app:square_height="350"
+        app:square_width="310" />
 
 </RelativeLayout>

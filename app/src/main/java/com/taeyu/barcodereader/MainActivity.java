@@ -36,16 +36,13 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    String savePath = Environment.getExternalStorageDirectory().getPath() + "/Barcode/";
-
     private BarcodeReader barcodeReader;
-    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        context = this.getApplicationContext();
+
 
         MainActivity.verifyStoragePermissions(MainActivity.this);
 
@@ -121,9 +118,9 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
                     Toast.makeText(getApplicationContext(), "바코드 (" + strCode + ") 저장 할수없습니다!",
                             Toast.LENGTH_LONG).show();
                 }
-                Intent intent = getIntent();
+                /*Intent intent = getIntent();
                 finish();
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
         builder.setNegativeButton("아니요", new DialogInterface.OnClickListener() {
@@ -133,9 +130,6 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
 
                 // Do nothing
                 dialog.dismiss();
-                Intent intent = getIntent();
-                finish();
-                startActivity(intent);
             }
         });
 
